@@ -1,0 +1,176 @@
+id	name	code
+4	Afghanistan	af
+8	Albania	al
+12	Algeria	dz
+24	Angola	ao
+10	Antarctica	aq
+32	Argentina	ar
+51	Armenia	am
+36	Australia	au
+40	Austria	at
+31	Azerbaijan	az
+44	Bahamas	bs
+50	Bangladesh	bd
+112	Belarus	by
+56	Belgium	be
+84	Belize	bz
+204	Benin	bj
+64	Bhutan	bt
+68	Bolivia, Plurinational State of	bo
+70	Bosnia and Herzegovina	ba
+72	Botswana	bw
+76	Brazil	br
+96	Brunei Darussalam	bn
+100	Bulgaria	bg
+854	Burkina Faso	bf
+108	Burundi	bi
+116	Cambodia	kh
+120	Cameroon	cm
+124	Canada	ca
+140	Central African Republic	cf
+148	Chad	td
+152	Chile	cl
+156	China	cn
+170	Colombia	co
+178	Congo	cg
+180	Congo, the Democratic Republic of the	cd
+188	Costa Rica	cr
+384	Cote d'Ivoire	ci
+191	Croatia	hr
+192	Cuba	cu
+196	Cyprus	cy
+203	Czech Republic	cz
+208	Denmark	dk
+262	Djibouti	dj
+214	Dominican Republic	do
+218	Ecuador	ec
+818	Egypt	eg
+222	El Salvador	sv
+226	Equatorial Guinea	gq
+232	Eritrea	er
+233	Estonia	ee
+231	Ethiopia	et
+13370	European Union	eu
+238	Falkland Islands (Malvinas)	fk
+242	Fiji	fj
+246	Finland	fi
+250	France	fr
+260	French Southern Territories	tf
+266	Gabon	ga
+270	Gambia	gm
+268	Georgia	ge
+276	Germany	de
+288	Ghana	gh
+300	Greece	gr
+304	Greenland	gl
+320	Guatemala	gt
+324	Guinea	gn
+624	Guinea-Bissau	gw
+328	Guyana	gy
+332	Haiti	ht
+340	Honduras	hn
+348	Hungary	hu
+352	Iceland	is
+356	India	in
+360	Indonesia	id
+364	Iran, Islamic Republic of	ir
+368	Iraq	iq
+372	Ireland	ie
+376	Israel	il
+380	Italy	it
+388	Jamaica	jm
+392	Japan	jp
+400	Jordan	jo
+398	Kazakhstan	kz
+404	Kenya	ke
+408	Korea, Democratic People's Republic of	kp
+410	Korea, Republic of	kr
+414	Kuwait	kw
+417	Kyrgyzstan	kg
+418	Lao People's Democratic Republic	la
+428	Latvia	lv
+422	Lebanon	lb
+426	Lesotho	ls
+430	Liberia	lr
+434	Libya	ly
+440	Lithuania	lt
+442	Luxembourg	lu
+807	Macedonia, the former Yugoslav Republic of	mk
+450	Madagascar	mg
+454	Malawi	mw
+458	Malaysia	my
+466	Mali	ml
+478	Mauritania	mr
+484	Mexico	mx
+498	Moldova, Republic of	md
+496	Mongolia	mn
+499	Montenegro	me
+504	Morocco	ma
+508	Mozambique	mz
+104	Myanmar	mm
+516	Namibia	na
+524	Nepal	np
+528	Netherlands	nl
+540	New Caledonia	nc
+554	New Zealand	nz
+558	Nicaragua	ni
+562	Niger	ne
+566	Nigeria	ng
+578	Norway	no
+512	Oman	om
+586	Pakistan	pk
+275	Palestinian Territory, Occupied	ps
+591	Panama	pa
+598	Papua New Guinea	pg
+600	Paraguay	py
+604	Peru	pe
+608	Philippines	ph
+616	Poland	pl
+620	Portugal	pt
+630	Puerto Rico	pr
+634	Qatar	qa
+642	Romania	ro
+643	Russian Federation	ru
+646	Rwanda	rw
+682	Saudi Arabia	sa
+686	Senegal	sn
+688	Serbia	rs
+694	Sierra Leone	sl
+703	Slovakia	sk
+705	Slovenia	si
+90	Solomon Islands	sb
+706	Somalia	so
+710	South Africa	za
+728	South Sudan	ss
+724	Spain	es
+144	Sri Lanka	lk
+729	Sudan	sd
+740	Suriname	sr
+748	Swaziland	sz
+752	Sweden	se
+756	Switzerland	ch
+760	Syrian Arab Republic	sy
+158	Taiwan, Province of China	tw
+762	Tajikistan	tj
+834	Tanzania, United Republic of	tz
+764	Thailand	th
+626	Timor-Leste	tl
+768	Togo	tg
+780	Trinidad and Tobago	tt
+788	Tunisia	tn
+792	Turkey	tr
+795	Turkmenistan	tm
+800	Uganda	ug
+804	Ukraine	ua
+784	United Arab Emirates	ae
+826	United Kingdom	gb
+840	United States	us
+858	Uruguay	uy
+860	Uzbekistan	uz
+548	Vanuatu	vu
+862	Venezuela	ve
+704	Viet Nam	vn
+732	Western Sahara	eh
+887	Yemen	ye
+894	Zambia	zm
+716	Zimbabwe	zw

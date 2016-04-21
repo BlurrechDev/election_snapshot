@@ -1,0 +1,14 @@
+name: election_snapshot
+version: 0.0.1
+description: A starter template for a polymer.dart web app.
+environment:
+  sdk: any
+dependencies:
+  browser: any
+  core_elements: any
+  d3: any
+  html5lib: any
+  polymer: any
+transformers:
+- polymer:
+    entry_points: web/index.html

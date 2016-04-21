@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Election View</title>
+    <meta name="description" content="Global Election data and opinion polls scraped from Wikipedia, updated at regular fixed intervals. New data will soon be added such as outcome odds.">
+  <link rel="import" href="lib/main_app.html">
+  <link rel="import" href="lib/earth_globe.html">
+  <link rel="import" href="packages/core_elements/core_pages.html">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="globe.css">
+  <link href="lib/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="http://feed.mikle.com/js/rssmikle.js"></script>
+</head>
+<body unresolved>
+  <h1 class='center_heading'>Earth Elects <span class='beta'>Beta<span style='color: black; font-size: 8pt;'>&nbsp; - last updated <span id="modified"></span></span></span></h1>
+  <script>var x = new Date(document.lastModified);document.getElementById("modified").innerHTML = x.toDateString();</script>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#" onclick="document.querySelector('core-pages').selected=0;var elems = document.querySelectorAll('li');[].forEach.call(elems, function(el) {el.classList.remove('active');});this.parentElement.classList.add('active');history.replaceState({selected: 'Front' }, 'page0', 'index.html#');">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#" onclick="document.querySelector('core-pages').selected=1;var elems = document.querySelectorAll('li');[].forEach.call(elems, function(el) {el.classList.remove('active');});this.parentElement.classList.add('active');history.replaceState({selected: 'Greece' }, 'page1', 'index.html#elections');">Elections</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right"><li><a href="#">About</a></li></ul>
+      </div>
+    </nav>
+  </div>
+  <script src="add_election_selector.js" type='text/javascript'></script>
+  <core-pages selected="0">
+    <div class='pagezero'>
+      <div id='frontandcenter' style="float: left; width: 60%;">
+        <earth-globe class='circle' id="earth-globe"></earth-globe>
+        <h2>Global Coverage</h2>
+        <p>Earth Elects aims to provide global coverage of elections in a highly auomated manner, with statistics and data available as conventiently as possible. Ultimately our aim is to allow the world to follow elections as they happen and are announced. Currently the site is in Alpha mode and as a result many features may be broken or unavailable.   </p>
+        <h2>Wikipedia Reliant</h2>
+        <p>This website would not be possible without the vast swathes of electoral information contributed by the public and maintained by the Wikimedia Foundation. As a result if this site ever ascends to profitability we pledge to give back in the form of publically declared charitable donations.
+        <h2>Neutral Point of View</h2>
+        <p>The statistics and publications available from Earth Elects are intended to be from a neutral point-of-view and where possible soley objective. The organisation is being developed in England and aims to expand coverage geographically into Europe firstly, as a result of a geographic bias alone.</p>
+      </div>
+        <a class="twitter-timeline" href="https://twitter.com/britainelects" data-widget-id="632131995024400384">Tweets by @britainelects</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div id="pageone" class='pageone'>
+      <div id="container" style="min-width: 310px; height: 400px; display: none; margin: 0 auto"></div>
+      <main-app></main-app>
+    </div>
+  </core-pages>
+  <script type="application/dart">export 'package:polymer/init.dart';</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="lib/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/data.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <script>
+    function loadGraph() {
+      $("#container").hide();
+      var cells = document.getElementsByTagName("td");
+      for (var i = 0; i < cells.length; i++) if (cells[i].innerHTML == 0) cells[i].innerHTML = '0';
+      $("#datatable tbody tr").each(function() {
+        $(this).find("td:eq(1)").remove();
+        $(this).find("th:eq(1)").remove();
+      });
+      if (document.querySelector('#datatable') == null) return;
+      $('#container').highcharts({
+        data: {
+          table: 'datatable',
+          startColumn: 0,
+          endColumn: 8
+        },
+        chart: {
+          type: 'line'
+        },
+        title: {
+          text: 'Polling Trend'
+        },
+        yAxis: {
+          title: {
+            text: '% Vote'
+          },
+          min: 0
+        },
+        tooltip: {
+          formatter: function () {
+            return '<b>' + this.series.name + '</b><br/>' + this.point.y + ' ' + this.point.name.toLowerCase();
+          }
+        }
+      });
+      $("#container").show();
+    }
+  </script>
+</body>
+</html>

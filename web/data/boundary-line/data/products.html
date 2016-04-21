@@ -1,0 +1,2944 @@
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OS OpenData Supply - Download or order OS
+	OpenData</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<meta name="DC.creator"
+	content="Ordnance Survey, http://www.os.uk/contactus" />
+<meta name="DC.date" scheme="DCTERMS.W3CDTF" content="2010-03-29" />
+<meta name="DC.subject" scheme="eGMS.IPSV" content="Civil Service" />
+<meta name="DC.title"
+	content="OS OpenData Supply - Download or order OS OpenData" />
+<meta name="eGMS.accessibility" scheme="eGMS.WCAG10" content="A" />
+<meta name="DC.identifier" scheme="DCTERMS.URI"
+	content="http://www.os.uk/opendata/supply" />
+<meta name="DC.publisher"
+	content="Ordnance Survey, Romsey Road, Southampton, SO16 4GU, 03456 05 05 05, http://www.os.uk/contactus" />
+<meta name="DC.coverage" content="GB" />
+<meta name="DC.language" scheme="ISO 639-2/T" content="eng" />
+
+<meta name="description"
+	content="Supporting and enabling businesses, government, communities and individuals to benefit from the use of Geographic Information." />
+<meta name="keywords"
+	content="os opendata,os open data supply,gis,making public data public,geographic information,geo spatial data,ordnance survey" />
+<meta name="copyright" content="Ordnance Survey 2010" />
+
+<script type="text/javascript" src="scripts/common.js"></script>
+<script type="text/javascript">
+	//          
+
+	//Functions findPosX and findPosY written by Peter-Paul Koch & Alex Tingle at http://www.quirksmode.org/js/findpos.html and http://blog.firetree.net/2005/07/04/javascript-find-position/ respectively.
+
+	function findPosX(obj) {
+		var curleft = 0;
+		if (obj.offsetParent) {
+			while (1) {
+				curleft += obj.offsetLeft;
+				if (!obj.offsetParent) {
+					break;
+				}
+				obj = obj.offsetParent;
+			}
+		} else if (obj.x) {
+			curleft += obj.x;
+		}
+		return curleft;
+	}
+
+	function findPosY(obj) {
+		var curtop = 0;
+		if (obj.offsetParent) {
+			while (1) {
+				curtop += obj.offsetTop;
+				if (!obj.offsetParent) {
+					break;
+				}
+				obj = obj.offsetParent;
+			}
+		} else if (obj.y) {
+			curtop += obj.y;
+		}
+		return curtop;
+	}
+
+	//Add onclick event handler to National Grid Square maps and allow selection of squares directly from map image. Original function written by Dominic Gehring. 
+	function gridSquareOverlay() {
+
+		//Create an array of National Grid Square values to attach to map images.
+		var gridSquare = new Array(13);
+		for (var i = 0; i < 13; i++) {
+			gridSquare[i] = new Array(7)
+		}
+		gridSquare[0][4] = "HP";
+		gridSquare[1][3] = "HT";
+		gridSquare[1][4] = "HU";
+		gridSquare[2][1] = "HW";
+		gridSquare[2][2] = "HX";
+		gridSquare[2][3] = "HY";
+		gridSquare[2][4] = "HZ";
+		gridSquare[3][0] = "NA";
+		gridSquare[3][1] = "NB";
+		gridSquare[3][2] = "NC";
+		gridSquare[3][3] = "ND";
+		gridSquare[4][0] = "NF";
+		gridSquare[4][1] = "NG";
+		gridSquare[4][2] = "NH";
+		gridSquare[4][3] = "NJ";
+		gridSquare[4][4] = "NK";
+		gridSquare[5][0] = "NL";
+		gridSquare[5][1] = "NM";
+		gridSquare[5][2] = "NN";
+		gridSquare[5][3] = "NO";
+		gridSquare[6][1] = "NR";
+		gridSquare[6][2] = "NS";
+		gridSquare[6][3] = "NT";
+		gridSquare[6][4] = "NU";
+		gridSquare[7][1] = "NW";
+		gridSquare[7][2] = "NX";
+		gridSquare[7][3] = "NY";
+		gridSquare[7][4] = "NZ";
+		gridSquare[7][5] = "OV";
+		gridSquare[8][3] = "SD";
+		gridSquare[8][4] = "SE";
+		gridSquare[8][5] = "TA";
+		gridSquare[9][2] = "SH";
+		gridSquare[9][3] = "SJ";
+		gridSquare[9][4] = "SK";
+		gridSquare[9][5] = "TF";
+		gridSquare[9][6] = "TG";
+		gridSquare[10][1] = "SM";
+		gridSquare[10][2] = "SN";
+		gridSquare[10][3] = "SO";
+		gridSquare[10][4] = "SP";
+		gridSquare[10][5] = "TL";
+		gridSquare[10][6] = "TM";
+		gridSquare[11][1] = "SR";
+		gridSquare[11][2] = "SS";
+		gridSquare[11][3] = "ST";
+		gridSquare[11][4] = "SU";
+		gridSquare[11][5] = "TQ";
+		gridSquare[11][6] = "TR";
+		gridSquare[12][0] = "SV";
+		gridSquare[12][1] = "SW";
+		gridSquare[12][2] = "SX";
+		gridSquare[12][3] = "SY";
+		gridSquare[12][4] = "SZ";
+		gridSquare[12][5] = "TV";
+
+		var allImages = document.getElementsByTagName("img");
+		var allImagesLength = allImages.length;
+
+		for (var i = 0; i < allImagesLength; i++) {
+			if (allImages[i].className == "gridmap") {
+
+				//Change the cursor.
+				allImages[i].style.cursor = "pointer";
+
+				//Attach the onclick event handler to the map image.
+				allImages[i].onclick = function(e) {
+
+					//Normalize event capture.
+					if (!e) {
+						var e = window.event;
+					}
+
+					//get the mouse co-ordinates.
+					if (e.pageX) {
+						var curX = e.pageX;
+						var curY = e.pageY;
+					} else {
+						var curX = e.clientX + document.body.scrollLeft;
+						var curY = e.clientY + document.body.scrollTop;
+					}
+
+					//Find the row and column selected.
+					var selectedColumn = Math
+							.floor((curX - findPosX(this)) / 19.28);
+					var selectedRow = Math
+							.floor((curY - findPosY(this)) / 19.28);
+
+					//Get the value of the selected square.
+					var selectedSquare = gridSquare[selectedRow][selectedColumn];
+
+					//Turn options on and off.
+					var gridOptions = this.parentNode
+							.getElementsByTagName("select")[0];
+					for (var j = 0; j < 55; j++) {
+						if (gridOptions[j].value == selectedSquare) {
+							if (gridOptions[j].selected) {
+								gridOptions[j].selected = false;
+							} else {
+								gridOptions[j].selected = true;
+							}
+							break;
+						}
+					}
+					//Pass through the product ID.
+					downloadCheck(gridOptions.id.substring(1));
+				}
+			}
+		}
+	}
+
+	function downloadCheck(productId) {
+
+		//Get the ID's of the select box and download checkbox.
+		var downloadCheckbox = document.getElementById("d" + productId);
+		var productSelect = document.getElementById("c" + productId);
+
+		//Un-check the download checkbox.
+		downloadCheckbox.checked = false;
+
+		//If any options are selected then re-check the download checkbox.
+		for (var i = 0; i < 55; i++) {
+			if (productSelect[i].selected) {
+				downloadCheckbox.checked = true;
+			}
+		}
+	}
+
+	function init() {
+		document.getElementById('jsflag').value = 'enabled';
+		setNav("supply");
+		zebra();
+		modifyHyperlinks();
+		gridSquareOverlay();
+	}
+
+	window.onload = init;
+	//
+</script>
+<style type="text/css" media="screen, projection">
+@import "css/reset.css";
+</style>
+<style type="text/css" media="screen, projection">
+@import "css/common.css";
+</style>
+<style type="text/css" media="print">
+@import "css/print.css";
+</style>
+</head>
+
+
+<body id="supply">
+
+	<div id="wrapper">
+
+		<a name="pagestart" id="pagestart"></a>
+	
+	<div class="hidden">
+		<p>Jump to the following:</p>
+		<ul>
+			<li><a href="#contentstart" accesskey="J" title="Jump to content [Accesskey: J]">Content</a></li>
+			<li><a href="#navstart" accesskey="K" title="Jump to primary navigation [Accesskey: K]">Navigation</a></li>
+			<li><a href="#navblockstart" accesskey="M" title="Jump to supplementary navigation block [Accesskey: M]">Supplementary navigation block</a></li>
+		</ul>
+	</div>
+
+	<div id="mast">
+
+		<p class="hidden"><a href="#navend" accesskey="S" title="Skip primary navigation [Accesskey: S]">Skip primary navigation</a></p>
+			
+		<a name="navstart" id="navstart"></a>
+				
+				<p><a href="http://www.os.uk/oswebsite/">www.os.uk</a></p>				<ul id="navigation">			<li id="hometab"><a href="http://www.os.uk/oswebsite/opendata/index.html" accesskey="1" title="Home [Accesskey: 1]">Home</a></li>			<li id="viewtab"><a href="http://www.os.uk/oswebsite/opendata/viewer/" class="newwin">View</a></li>			<li id="developtab"><a href="http://openspace.os.uk/openspace/">Develop</a></li>			<li id="supplytab"><a href="https://www.os.uk/opendatadownload/products.html">Supply</a></li>			<li id="helptab"><a href="http://www.os.uk/oswebsite/opendata/help.html" accesskey="6" title="Help [Accesskey: 6]">Help</a></li>		</ul>
+		
+		<a name="navend" id="navend"></a>
+		
+	</div>
+
+
+		<div id="content">
+
+			<a name="contentstart" id="contentstart"></a>
+
+			<div id="intro">
+
+				<ul id="logos">
+					<li><a href="http://www.os.uk/oswebsite/"
+						title="To OS home page"><img
+							src="https://www.os.uk/images/ui/logo/os-standard-portrait-90.png"
+							alt="OS logo" /></a></li>
+					<li><a
+						href="http://www.os.uk/oswebsite/opendata/index.html"
+						title="To OS OpenData home page"><img
+							src="images/opendatalogo.png" width="212" height="59"
+							alt="OS OpenData logo" /></a></li>
+				</ul>
+
+				<h1>Mapping data and geographic information from OS</h1>
+
+				<p><strong>Order OS OpenData here</strong></p><p>Please note that the file sizes for selected products, shown in brackets under the 'coverage' column, refer to downloaded files only.</p><p>All files for download are supplied as .zip archives.</p><p>For more information about any of these products, please see our <a href="/business-and-government/products/opendata-products-grid.html">products page</a>.</p><p>If you are new to our data, our <a href="/business-and-government/help-and-support/products/opendata-getting-started.html">getting started information</a> explains the different formats and how to work with them.</p><p><strong>July 2015: </strong>New versions of Meridian 2, OS Open Names and Terrain 50 now available</p><p><strong>August 2015: </strong>New version of Code-Point Open now available</p><p><strong>September 2015:</strong> New version of OS VectorMap District now available</p><p><strong>October 2015:</strong> New versions of OS Open Names, Boundary-Line and OS Open Roads now available</p><p><strong>November 2015:</strong> New versions of OS Street View, Code-Point Open and OS Locator now available</p>
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+	
+	
+
+	
+
+			</div>
+
+			
+
+			<form id="dataform" name="products" action="/opendatadownload/products.html;jsessionid=8ECEC591F0ACA8C1C19E57B81A2A206A" method="post" onsubmit="return validate(this)">
+
+				<div>
+					<input type="hidden" id="jsflag" name="javascript" value="disabled" />
+				</div>
+
+				<fieldset>
+					<legend>
+						<span class="hidden">Products</span>
+					</legend>
+
+					<table id="products" border="0" cellpadding="0" cellspacing="0"
+						summary="Table of available OS mapping data">
+
+
+						<thead>
+
+							<tr>
+								<th id="productcol" scope="col" colspan="2">Product</th>
+								<th id="coveragecol" scope="col">Coverage</th>
+								<th id="postcol" scope="col"><acronym
+									title="Digital Versatile Disc or Digital Video Disc">DVD</acronym></th>
+								<th id="downloadcol" scope="col">Download</th>
+							</tr>
+
+
+						</thead>
+
+						<tbody>
+						
+							<!-- REORDERED PRODUCTS -->
+							
+							<!-- OS Open Map - Local - Start -->
+							
+								<tr id="OPMPLC">
+
+									<td class="preview"><img
+										src="images/OSOML.png" width="100"
+										 height="75" alt="OS Open Map - Local" /></td>
+
+									<td class="product">
+										<h2>OS Open Map - Local</h2>
+										<p>
+											<em>Data type:</em>											
+										Vector
+										</p> <em>Supply format:</em> <select
+										id="OPMPLC" name="format[OPMPLC_ALL]">
+											<option value="ESRI SHAPE" selected="selected">ESRI
+												&reg; Shape</option>
+											<option value="GML 3">GML 3</option>
+									</select>
+										
+										
+										
+										<p>
+											<em>Version:</em>
+											03/2015
+										</p>
+
+										<div class="gridhelp">
+											<h3>Selecting National Grid Reference squares</h3>
+
+											<script type="text/javascript">
+												//          
+												document
+														.write('<p>Using the map on the right, or a <a href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf" title="PDF Document [1.4 Mb]" class="newwin">full size version</a>, identify which square(s) you want to download. Select or deselect squares by clicking on the map on the right.'
+																+ '<p>To manually select or deselect multiple squares from the two letter reference list, press and hold the <strong>CTRL</strong> key (Windows) or the <strong>Command</strong> key (OS X) while selecting from the list.</p>');
+												//
+											</script>
+
+											<noscript>
+												<p>
+													Using the map on the right, or a <a
+														href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf"
+														title="PDF Document [1.4 Mb]" class="newwin">full size
+														version</a>, identify which square(s) you want to download.
+													Select or deselect squares by clicking on the two letter
+													reference in the list to the right of the map.
+												</p>
+												<p>
+													To select or deselect multiple squares from the two letter
+													reference list, press and hold the <strong>CTRL</strong>
+													key (Windows) or the <strong>Command</strong> key (OS X)
+													while selecting from the list.
+												</p>
+											</noscript>
+										</div> <br />
+
+										<div class="productinfo">
+											<p>Download size varies according to area selected.</p><p>OS Open Map - Local is a detailed backdrop map for Great&nbsp;Britain, which has been derived from Ordnance&nbsp;Survey large scale data. It is the most detailed open backdrop mapping dataset available, providing a customisable map for displaying other datasets and the simple analysis of a location.<br />This product is a Beta.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/0000/certificates/0000/badge.js","odi0000");</script><div id="odi0000"></div>
+										</div>
+									</td>
+									<td class="deliveryoptions">
+										<p>
+											National Grid Reference squares<br /> [5 Kb - 151 Mb]
+										</p>
+										
+										
+
+										<div id = "download[OPMPLC_Grid]"></div>
+										<div id="OPMPLCgrid" class="natgrid">
+											<img src="images/nationalgrid.gif" class="gridmap"
+												width="135" height="250" alt="National Grid Reference map" />
+											<label for="cOPMPLCg" class="hidden">Coverage OS
+												Gazetteer National Grid Reference </label> <select id="cOPMPLCg"
+												name="coverage[OPMPLC_Grid]" multiple="multiple"
+												onchange="downloadCheck(this.id.substring(1));">
+												
+													<option value="HP">
+														HP
+													</option>
+												
+													<option value="HT">
+														HT
+													</option>
+												
+													<option value="HU">
+														HU
+													</option>
+												
+													<option value="HW">
+														HW
+													</option>
+												
+													<option value="HX">
+														HX
+													</option>
+												
+													<option value="HY">
+														HY
+													</option>
+												
+													<option value="HZ">
+														HZ
+													</option>
+												
+													<option value="NA">
+														NA
+													</option>
+												
+													<option value="NB">
+														NB
+													</option>
+												
+													<option value="NC">
+														NC
+													</option>
+												
+													<option value="ND">
+														ND
+													</option>
+												
+													<option value="NF">
+														NF
+													</option>
+												
+													<option value="NG">
+														NG
+													</option>
+												
+													<option value="NH">
+														NH
+													</option>
+												
+													<option value="NJ">
+														NJ
+													</option>
+												
+													<option value="NK">
+														NK
+													</option>
+												
+													<option value="NL">
+														NL
+													</option>
+												
+													<option value="NM">
+														NM
+													</option>
+												
+													<option value="NN">
+														NN
+													</option>
+												
+													<option value="NO">
+														NO
+													</option>
+												
+													<option value="NR">
+														NR
+													</option>
+												
+													<option value="NS">
+														NS
+													</option>
+												
+													<option value="NT">
+														NT
+													</option>
+												
+													<option value="NU">
+														NU
+													</option>
+												
+													<option value="NW">
+														NW
+													</option>
+												
+													<option value="NX">
+														NX
+													</option>
+												
+													<option value="NY">
+														NY
+													</option>
+												
+													<option value="NZ">
+														NZ
+													</option>
+												
+													<option value="OV">
+														OV
+													</option>
+												
+													<option value="SD">
+														SD
+													</option>
+												
+													<option value="SE">
+														SE
+													</option>
+												
+													<option value="SH">
+														SH
+													</option>
+												
+													<option value="SJ">
+														SJ
+													</option>
+												
+													<option value="SK">
+														SK
+													</option>
+												
+													<option value="SM">
+														SM
+													</option>
+												
+													<option value="SN">
+														SN
+													</option>
+												
+													<option value="SO">
+														SO
+													</option>
+												
+													<option value="SP">
+														SP
+													</option>
+												
+													<option value="SR">
+														SR
+													</option>
+												
+													<option value="SS">
+														SS
+													</option>
+												
+													<option value="ST">
+														ST
+													</option>
+												
+													<option value="SU">
+														SU
+													</option>
+												
+													<option value="SV">
+														SV
+													</option>
+												
+													<option value="SW">
+														SW
+													</option>
+												
+													<option value="SX">
+														SX
+													</option>
+												
+													<option value="SY">
+														SY
+													</option>
+												
+													<option value="SZ">
+														SZ
+													</option>
+												
+													<option value="TA">
+														TA
+													</option>
+												
+													<option value="TF">
+														TF
+													</option>
+												
+													<option value="TG">
+														TG
+													</option>
+												
+													<option value="TL">
+														TL
+													</option>
+												
+													<option value="TM">
+														TM
+													</option>
+												
+													<option value="TQ">
+														TQ
+													</option>
+												
+													<option value="TR">
+														TR
+													</option>
+												
+													<option value="TV">
+														TV
+													</option>
+												
+											</select>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+										</td>
+										<td class="deliveryoptions">
+											<p>
+												<label for="dOPMPLCg" class="hidden">Download OS
+													Gazetteer National Grid Squares </label><input type="checkbox"
+													id="dOPMPLCg" name="download[OPMPLC_Grid]" value="true"
+													title="Download" />
+											</p>
+
+									</td>
+								</tr>
+							
+							<!-- OS Open Map - Local - End -->
+							
+							<!-- OS Open Names - Start -->
+							
+								<tr id="OPNAME">
+
+									<td class="preview"><img
+										src="images/OS-OpenNames.png" width="100"
+										height="75" alt="OS Open Names sample" /></td>
+
+									<td class="product">
+										<h2>OS Open Names</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p> <label for="OPNAMEgb"><em>Supply format:</em></label> <select
+										id="OPNAMEgb" name="format[OPNAME_ALL]">
+											<option value="CSV" selected="selected">CSV</option>
+											<option value="GML 3">GML 3</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											10/2015
+										</p>
+
+										<div class="gridhelp">
+											<h3>Selecting National Grid Reference squares</h3>
+
+											<script type="text/javascript">
+												//          
+												document
+														.write('<p>Using the map on the right, or a <a href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf" title="PDF Document [1.4 Mb]" class="newwin">full size version</a>, identify which square(s) you want to download. Select or deselect squares by clicking on the map on the right.'
+																+ '<p>To manually select or deselect multiple squares from the two letter reference list, press and hold the <strong>CTRL</strong> key (Windows) or the <strong>Command</strong> key (OS X) while selecting from the list.</p>');
+												//
+											</script>
+
+											<noscript>
+												<p>
+													Using the map on the right, or a <a
+														href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf"
+														title="PDF Document [1.4 Mb]" class="newwin">full size
+														version</a>, identify which square(s) you want to download.
+													Select or deselect squares by clicking on the two letter
+													reference in the list to the right of the map.
+												</p>
+												<p>
+													To select or deselect multiple squares from the two letter
+													reference list, press and hold the <strong>CTRL</strong>
+													key (Windows) or the <strong>Command</strong> key (OS X)
+													while selecting from the list.
+												</p>
+											</noscript>
+										</div> <br />
+										<div class="productinfo">
+											<p><span>Download size varies according to area selected.</span></p><p><span>OS Open Names contains accurate and up to date settlement names, road names and numbers, postcodes and their locations with additional location information and links to other datasets. It is designed for use across all market sectors and can be used for web service and mobile development. <br />Please note tiles HW, HX and OV currently do not contain any data and therefore links will not be supplied to these tiles.<br />If you only select these tiles you will not be able to submit your order. <br /></span></p><script>renderODIBadge("https://certificates.theodi.org/datasets/24418/certificates/24418/badge.js","odi24418");</script><div id="odi24418"></div>
+										</div>
+
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain</p>
+										<p>
+											National Grid Reference squares<br /> [1 Mb - 35 Mb]
+										</p>
+										
+										
+
+										<div id = "download[OPNAME_Grid]"></div>
+										<div id="OPNAMEgrid" class="natgrid">
+											<img src="images/nationalgrid.gif" class="gridmap"
+												width="135" height="250" alt="National Grid Reference map" />
+											<label for="cOPNAMEg" class="hidden">Coverage OS
+												Open Names National Grid Reference </label> <select id="cOPNAMEg"
+												name="coverage[OPNAME_Grid]" multiple="multiple"
+												onchange="downloadCheck(this.id.substring(1));">
+												
+													<option value="HP">
+														HP
+													</option>
+												
+													<option value="HT">
+														HT
+													</option>
+												
+													<option value="HU">
+														HU
+													</option>
+												
+													<option value="HW">
+														HW
+													</option>
+												
+													<option value="HX">
+														HX
+													</option>
+												
+													<option value="HY">
+														HY
+													</option>
+												
+													<option value="HZ">
+														HZ
+													</option>
+												
+													<option value="NA">
+														NA
+													</option>
+												
+													<option value="NB">
+														NB
+													</option>
+												
+													<option value="NC">
+														NC
+													</option>
+												
+													<option value="ND">
+														ND
+													</option>
+												
+													<option value="NF">
+														NF
+													</option>
+												
+													<option value="NG">
+														NG
+													</option>
+												
+													<option value="NH">
+														NH
+													</option>
+												
+													<option value="NJ">
+														NJ
+													</option>
+												
+													<option value="NK">
+														NK
+													</option>
+												
+													<option value="NL">
+														NL
+													</option>
+												
+													<option value="NM">
+														NM
+													</option>
+												
+													<option value="NN">
+														NN
+													</option>
+												
+													<option value="NO">
+														NO
+													</option>
+												
+													<option value="NR">
+														NR
+													</option>
+												
+													<option value="NS">
+														NS
+													</option>
+												
+													<option value="NT">
+														NT
+													</option>
+												
+													<option value="NU">
+														NU
+													</option>
+												
+													<option value="NW">
+														NW
+													</option>
+												
+													<option value="NX">
+														NX
+													</option>
+												
+													<option value="NY">
+														NY
+													</option>
+												
+													<option value="NZ">
+														NZ
+													</option>
+												
+													<option value="OV">
+														OV
+													</option>
+												
+													<option value="SD">
+														SD
+													</option>
+												
+													<option value="SE">
+														SE
+													</option>
+												
+													<option value="SH">
+														SH
+													</option>
+												
+													<option value="SJ">
+														SJ
+													</option>
+												
+													<option value="SK">
+														SK
+													</option>
+												
+													<option value="SM">
+														SM
+													</option>
+												
+													<option value="SN">
+														SN
+													</option>
+												
+													<option value="SO">
+														SO
+													</option>
+												
+													<option value="SP">
+														SP
+													</option>
+												
+													<option value="SR">
+														SR
+													</option>
+												
+													<option value="SS">
+														SS
+													</option>
+												
+													<option value="ST">
+														ST
+													</option>
+												
+													<option value="SU">
+														SU
+													</option>
+												
+													<option value="SV">
+														SV
+													</option>
+												
+													<option value="SW">
+														SW
+													</option>
+												
+													<option value="SX">
+														SX
+													</option>
+												
+													<option value="SY">
+														SY
+													</option>
+												
+													<option value="SZ">
+														SZ
+													</option>
+												
+													<option value="TA">
+														TA
+													</option>
+												
+													<option value="TF">
+														TF
+													</option>
+												
+													<option value="TG">
+														TG
+													</option>
+												
+													<option value="TL">
+														TL
+													</option>
+												
+													<option value="TM">
+														TM
+													</option>
+												
+													<option value="TQ">
+														TQ
+													</option>
+												
+													<option value="TR">
+														TR
+													</option>
+												
+													<option value="TV">
+														TV
+													</option>
+												
+											</select>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<label for="pOPNAMEgb" class="hidden">Post OS
+												Open Names GB </label><input type="checkbox" id="pOPNAMEgb"
+												name="post[OPNAME_GB]" value="true" title="DVD" />
+										</p>
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+										<p>
+											<label for="dOPNAMEg" class="hidden">Download OS
+												Open Names National Grid Squares </label><input type="checkbox"
+												id="dOPNAMEg" name="download[OPNAME_Grid]" value="true"
+												title="Download" />
+										</p>
+
+									</td>
+
+								</tr>
+							
+							<!-- OS Open Names - End -->
+							
+							<!-- OS Open Roads - Start -->
+							
+								<tr id="bl">
+
+									<td class="preview"><img
+										src="images/OS-Roads.png" width="100"
+										height="75" alt="OS Open Roads" /></td>
+
+									<td class="product">
+										<h2>
+											OS Open Roads
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p>
+										<p>
+											<label for="fblgb"><em>Supply format:</em> </label> <select
+												id="fblgb" name="format[OPROAD_GB]">
+												<option value="ESRI SHAPE" selected="selected">ESRI
+													&reg; Shape</option>
+												<option value="GML 3">GML 3</option>
+											</select>
+										</p>
+										<p>
+											<em>Version:</em>
+											10/2015
+										</p>
+										<div class="productinfo">
+											<p>OS Open Roads is a connected road network for Great&nbsp;Britain which has been derived from Ordnance&nbsp;Survey large scale data. It is the most detailed open data roads network product available, providing a structured and attributed network for sharing information and simple analysis of the road network.<br />This product is a Beta.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/0000/certificates/0000/badge.js","odi0000");</script><div id="odi0000"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape: 340 Mb]<br /> [GML 3: 305 Mb]
+										</p>
+									</td>
+
+									<td class="deliveryoptions"> 
+											<p>
+												<acronym title="Not Available">N/A</acronym>
+											</p>
+										</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="droadgb" class="hidden">Download
+													OS Open Roads</label><input type="checkbox"
+													id="droadgb" name="download[OPROAD_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- OS Open Roads - End -->
+							
+							<!-- OS Open Rivers - Start -->
+							
+								<tr id="bl">
+
+									<td class="preview"><img
+										src="images/OP-Rivers.png" width="100"
+										height="75" alt="OS Open Rivers" /></td>
+
+									<td class="product">
+										<h2>
+											OS Open Rivers
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p>
+										<p>
+											<label for="fblgb"><em>Supply format:</em> </label> <select
+												id="fblgb" name="format[OPRVRS_GB]">
+												<option value="ESRI SHAPE" selected="selected">ESRI
+													&reg; Shape</option>
+												<option value="GML 3">GML 3</option>
+											</select>
+										</p>
+										<p>
+											<em>Version:</em>
+											03/2015
+										</p>
+										<div class="productinfo">
+											<p>OS Open Rivers is a connected river network for Great&nbsp;Britain which has been derived from Ordnance&nbsp;Survey large scale data. It shows the flow and the locations of rivers, streams, lakes and canals, across Great&nbsp;Britain, providing a structured and attributed network for sharing information and simple analysis of the river network.<br />This product is a Beta.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/0000/certificates/0000/badge.js","odi0000");</script><div id="odi0000"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape: 39 Mb]<br /> [GML 3: 39 Mb]
+										</p>
+									</td>
+
+									<td class="deliveryoptions"> 
+											<p>
+												<acronym title="Not Available">N/A</acronym>
+											</p>
+										</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dblgb" class="hidden">Download
+													OS OpenMap Water</label><input type="checkbox"
+													id="dblgb" name="download[OPRVRS_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- OS Open Rivers - End -->
+
+							<!-- GB Overview Maps - Start -->
+							
+								<tr id="overgb">
+
+									<td class="preview"><img
+										src="images/GB-Overview-Image.png" width="100"
+										height="75" alt="GB Overview Maps" /></td>
+
+									<td class="product">
+										<h2>GB Overview Maps</h2>
+										<p>
+											<em>Data type:</em>
+											Raster
+										</p>
+										<p>
+											<em>Supply format:</em> GeoTIFF Full Colour
+										</p>
+										<p>
+											<em>Version:</em>
+											12/2014
+										</p>
+										<div class="productinfo">
+											<p style="margin:15.45pt 0cm"><span style="font-size:10.5pt;font-family:'Arial','sans-serif';color:#666666">GB Overview Maps show Great&nbsp;Britain with country, capitals and cities labelled. There are 2 maps supplied - one showing countries and capitals and another more detailed showing cities. </span></p><script>renderODIBadge("https://certificates.theodi.org/datasets/000/certificates/00000/badge.js","odi00000A");</script><div id="odi00000A"></div>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain [9 Mb]</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="povergbgb" class="hidden">Post GB
+													Overview Maps</label><input type="checkbox" id="povergbgb"
+													name="post[OVERGB_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="overgbd" class="hidden">GB Overview Maps
+													download</label><input type="checkbox" id="overgbd"
+													name="download[OVERGB_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- GB Overview Map - End -->
+							
+							<!-- OS Terrain 50 - Start -->
+							
+								<tr id="terr50">
+
+									<td class="preview"><img
+										src="images/OSTerrain50.png" width="100"
+										height="75" alt="OS Terrain 50 map sample" /></td>
+
+									<td class="product">
+
+										<h2>OS Terrain 50</h2>
+
+										<p>
+											<em>Data type:</em>
+											Grid, Vector (Contours)
+										</p> <label for="fterr50gb"><em>Supply format:</em> </label> <select
+										id="fterr50gb" name="format[TERR50_GB]">
+											<option value="ESRI SHAPE (CONTOURS)" selected="selected">ESRI
+												&reg; Shape (Contours)</option>
+											<option value="GML (CONTOURS)">GML (Contours)</option>
+											<option value="ASCII GRID AND GML (GRID)">ASCII Grid
+												and GML (Grid)</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											07/2015
+										</p>
+										<div class="productinfo">
+											<p>OS Terrain 50 is a new height product for Great&nbsp;Britain.</p><p>It is supplied both as a set of 50m gridded digital terrain model (OS Terrain 50 grid) and 10m contours and spot heights (OS Terrain 50 contours).</p><script>renderODIBadge("https://certificates.theodi.org/datasets/591/certificates/14859/badge.js","odi14859");</script><div id="odi14859"></div>
+										</div>
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape (Contours): 1.1 Gb]<br />[GML (Contours):
+											1.1 Gb]<br />[ASCII Grid and GML (Grid): 162 Mb]
+										</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pterr50gb" class="hidden">Post
+													OSTerrain50 Great Britain</label><input type="checkbox"
+													id="pterr50gb" name="post[TERR50_GB]" value="true"
+													title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dterr50gb" class="hidden">Download
+													OSTerrain50 Great Britain</label><input type="checkbox"
+													id="dterr50gb" name="download[TERR50_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- OS Terrain 50 - End -->
+
+							<!-- OS VectorMap District (vector) - Start -->
+							
+								<tr id="osvmdvec">
+
+									<td class="preview"><img
+										src="images/vectormapdistrict-vector.png" width="100"
+										height="75" alt="OS VectorMap&trade; District vector sample" />
+
+									</td>
+
+									<td class="product">
+										<h2>
+											OS VectorMap<sup>&trade;</sup> District
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p> <label for="vmdvecgb"><em>Supply format:</em></label> <select
+										id="vmdvecgb" name="format[VMDVEC_ALL]">
+											<option value="ESRI Shape" selected="selected">ESRI
+												&reg; Shape</option>
+											<option value="GML 3.2">GML 3.2</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											09/2015
+										</p>
+
+										<div class="gridhelp">
+											<h3>Selecting National Grid Reference squares</h3>
+
+											<script type="text/javascript">
+												//          
+												document
+														.write('<p>Using the map on the right, or a <a href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf" title="PDF Document [1.4 Mb]" class="newwin">full size version</a>, identify which square(s) you want to download. Select or deselect squares by clicking on the map on the right.'
+																+ '<p>To manually select or deselect multiple squares from the two letter reference list, press and hold the <strong>CTRL</strong> key (Windows) or the <strong>Command</strong> key (OS X) while selecting from the list.</p>');
+												//
+											</script>
+
+											<noscript>
+												<p>
+													Using the map on the right, or a <a
+														href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf"
+														title="PDF Document [1.4 Mb]" class="newwin">full size
+														version</a>, identify which square(s) you want to download.
+													Select or deselect squares by clicking on the two letter
+													reference in the list to the right of the map.
+												</p>
+												<p>
+													To select or deselect multiple squares from the two letter
+													reference list, press and hold the <strong>CTRL</strong>
+													key (Windows) or the <strong>Command</strong> key (OS X)
+													while selecting from the list.
+												</p>
+											</noscript>
+										</div>
+
+										<div class="productinfo">
+											<p>Download size varies according to area selected.</p><h3>Note</h3><p>Please note that this is the <strong>vector</strong> format of OS VectorMap District.</p><p>Cartographic Stylesheets are available for <a href="https://www.ordnancesurvey.co.uk/resources/carto-design/cartographic-stylesheets.html">free download</a>.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/852/certificates/14861/badge.js","odi14861a");</script><div id="odi14861a"></div>
+										</div>
+
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain</p>
+										<p>
+											National Grid Reference squares<br /> [1 Mb - 200 Mb]
+										</p>
+										
+										
+
+										<div id = "download[VMDVEC_Grid]"></div>
+										<div id="vmdvecgrid" class="natgrid">
+											<img src="images/nationalgrid.gif" class="gridmap"
+												width="135" height="250" alt="National Grid Reference map" />
+											<label for="cvmdvecg" class="hidden">Coverage OS
+												VectorMap<sup>&trade;</sup> District National Grid Reference
+											</label> <select id="cvmdvecg" name="coverage[VMDVEC_Grid]"
+												multiple="multiple"
+												onchange="downloadCheck(this.id.substring(1));">
+												
+													<option value="HP">
+														HP
+													</option>
+												
+													<option value="HT">
+														HT
+													</option>
+												
+													<option value="HU">
+														HU
+													</option>
+												
+													<option value="HW">
+														HW
+													</option>
+												
+													<option value="HX">
+														HX
+													</option>
+												
+													<option value="HY">
+														HY
+													</option>
+												
+													<option value="HZ">
+														HZ
+													</option>
+												
+													<option value="NA">
+														NA
+													</option>
+												
+													<option value="NB">
+														NB
+													</option>
+												
+													<option value="NC">
+														NC
+													</option>
+												
+													<option value="ND">
+														ND
+													</option>
+												
+													<option value="NF">
+														NF
+													</option>
+												
+													<option value="NG">
+														NG
+													</option>
+												
+													<option value="NH">
+														NH
+													</option>
+												
+													<option value="NJ">
+														NJ
+													</option>
+												
+													<option value="NK">
+														NK
+													</option>
+												
+													<option value="NL">
+														NL
+													</option>
+												
+													<option value="NM">
+														NM
+													</option>
+												
+													<option value="NN">
+														NN
+													</option>
+												
+													<option value="NO">
+														NO
+													</option>
+												
+													<option value="NR">
+														NR
+													</option>
+												
+													<option value="NS">
+														NS
+													</option>
+												
+													<option value="NT">
+														NT
+													</option>
+												
+													<option value="NU">
+														NU
+													</option>
+												
+													<option value="NW">
+														NW
+													</option>
+												
+													<option value="NX">
+														NX
+													</option>
+												
+													<option value="NY">
+														NY
+													</option>
+												
+													<option value="NZ">
+														NZ
+													</option>
+												
+													<option value="OV">
+														OV
+													</option>
+												
+													<option value="SD">
+														SD
+													</option>
+												
+													<option value="SE">
+														SE
+													</option>
+												
+													<option value="SH">
+														SH
+													</option>
+												
+													<option value="SJ">
+														SJ
+													</option>
+												
+													<option value="SK">
+														SK
+													</option>
+												
+													<option value="SM">
+														SM
+													</option>
+												
+													<option value="SN">
+														SN
+													</option>
+												
+													<option value="SO">
+														SO
+													</option>
+												
+													<option value="SP">
+														SP
+													</option>
+												
+													<option value="SR">
+														SR
+													</option>
+												
+													<option value="SS">
+														SS
+													</option>
+												
+													<option value="ST">
+														ST
+													</option>
+												
+													<option value="SU">
+														SU
+													</option>
+												
+													<option value="SV">
+														SV
+													</option>
+												
+													<option value="SW">
+														SW
+													</option>
+												
+													<option value="SX">
+														SX
+													</option>
+												
+													<option value="SY">
+														SY
+													</option>
+												
+													<option value="SZ">
+														SZ
+													</option>
+												
+													<option value="TA">
+														TA
+													</option>
+												
+													<option value="TF">
+														TF
+													</option>
+												
+													<option value="TG">
+														TG
+													</option>
+												
+													<option value="TL">
+														TL
+													</option>
+												
+													<option value="TM">
+														TM
+													</option>
+												
+													<option value="TQ">
+														TQ
+													</option>
+												
+													<option value="TR">
+														TR
+													</option>
+												
+													<option value="TV">
+														TV
+													</option>
+												
+											</select>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<label for="pvmdvecgb" class="hidden">Post OS
+												VectorMap<sup>&trade;</sup> District GB
+											</label><input type="checkbox" id="pvmdvecgb" name="post[VMDVEC_GB]"
+												value="true" title="DVD" />
+										</p>
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+										<p>
+											<label for="dvmdvecg" class="hidden">Download OS
+												VectorMap<sup>&trade;</sup> District National Grid Squares
+											</label><input type="checkbox" id="dvmdvecg"
+												name="download[VMDVEC_Grid]" value="true" title="Download" />
+										</p>
+
+									</td>
+
+								</tr>
+							
+							<!-- OS VectorMap District (vector) - End -->
+
+							<!-- OS VectorMap District (raster) - Start -->
+							
+								<tr id="vmdras">
+
+									<td class="preview"><img
+										src="images/vectormapdistrict-raster.png" width="100"
+										height="75" alt="OS VectorMap&trade; District raster sample" />
+
+									</td>
+
+									<td class="product">
+										<h2>
+											OS VectorMap<sup>&trade;</sup> District
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Raster
+										</p> <label for="vmdrasgb"><em>Supply format:</em></label> <select
+										id="vmdrasgb" name="format[VMDRAS_ALL]">
+											<option value="GeoTIFF Full Colour" selected="selected">GeoTIFF
+												Full Colour</option>
+											<option value="GeoTIFF Backdrop">GeoTIFF Backdrop</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											09/2015
+										</p>
+
+										<div class="gridhelp">
+											<h3>Selecting National Grid Reference squares</h3>
+
+											<script type="text/javascript">
+												//          
+												document
+														.write('<p>Using the map on the right, or a <a href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf" title="PDF Document [1.4 Mb]" class="newwin">full size version</a>, identify which square(s) you want to download. Select or deselect squares by clicking on the map on the right.'
+																+ '<p>To manually select or deselect multiple squares from the two letter reference list, press and hold the <strong>CTRL</strong> key (Windows) or the <strong>Command</strong> key (OS X) while selecting from the list.</p>');
+												//
+											</script>
+
+											<noscript>
+												<p>
+													Using the map on the right, or a <a
+														href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf"
+														title="PDF Document [1.4 Mb]" class="newwin">full size
+														version</a>, identify which square(s) you want to download.
+													Select or deselect squares by clicking on the two letter
+													reference in the list to the right of the map.
+												</p>
+												<p>
+													To select or deselect multiple squares from the two letter
+													reference list, press and hold the <strong>CTRL</strong>
+													key (Windows) or the <strong>Command</strong> key (OS X)
+													while selecting from the list.
+												</p>
+											</noscript>
+
+										</div>
+
+										<div class="productinfo">
+											<p>Download size varies according to area selected.</p><h3>Note</h3><p>Please note that this is the <strong>raster</strong> format of OS VectorMap District.</p><p>The full colour style has stronger colours whilst the backdrop colour is more suited to overlaying your own data. Free sea tiles can also be downloaded from our website for improved display beyond the coast.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/852/certificates/14861/badge.js","odi14861b");</script><div id="odi14861b"></div>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain</p>
+										<p>
+											National Grid Reference squares<br /> [1 Mb - 800 Mb]
+										</p>
+										
+										
+
+										<div id = "download[VMDRAS_Grid]"></div>
+										<div id="vmdrasgrid" class="natgrid">
+											<img src="images/nationalgrid.gif" class="gridmap"
+												width="135" height="250" alt="National Grid Reference map" />
+											<label for="cvmdrasg" class="hidden">Coverage OS
+												VectorMap<sup>&trade;</sup> District National Grid Reference
+											</label> <select id="cvmdrasg" name="coverage[VMDRAS_Grid]"
+												multiple="multiple"
+												onchange="downloadCheck(this.id.substring(1));">
+												
+													<option value="HP">
+														HP
+													</option>
+												
+													<option value="HT">
+														HT
+													</option>
+												
+													<option value="HU">
+														HU
+													</option>
+												
+													<option value="HW">
+														HW
+													</option>
+												
+													<option value="HX">
+														HX
+													</option>
+												
+													<option value="HY">
+														HY
+													</option>
+												
+													<option value="HZ">
+														HZ
+													</option>
+												
+													<option value="NA">
+														NA
+													</option>
+												
+													<option value="NB">
+														NB
+													</option>
+												
+													<option value="NC">
+														NC
+													</option>
+												
+													<option value="ND">
+														ND
+													</option>
+												
+													<option value="NF">
+														NF
+													</option>
+												
+													<option value="NG">
+														NG
+													</option>
+												
+													<option value="NH">
+														NH
+													</option>
+												
+													<option value="NJ">
+														NJ
+													</option>
+												
+													<option value="NK">
+														NK
+													</option>
+												
+													<option value="NL">
+														NL
+													</option>
+												
+													<option value="NM">
+														NM
+													</option>
+												
+													<option value="NN">
+														NN
+													</option>
+												
+													<option value="NO">
+														NO
+													</option>
+												
+													<option value="NR">
+														NR
+													</option>
+												
+													<option value="NS">
+														NS
+													</option>
+												
+													<option value="NT">
+														NT
+													</option>
+												
+													<option value="NU">
+														NU
+													</option>
+												
+													<option value="NW">
+														NW
+													</option>
+												
+													<option value="NX">
+														NX
+													</option>
+												
+													<option value="NY">
+														NY
+													</option>
+												
+													<option value="NZ">
+														NZ
+													</option>
+												
+													<option value="OV">
+														OV
+													</option>
+												
+													<option value="SD">
+														SD
+													</option>
+												
+													<option value="SE">
+														SE
+													</option>
+												
+													<option value="SH">
+														SH
+													</option>
+												
+													<option value="SJ">
+														SJ
+													</option>
+												
+													<option value="SK">
+														SK
+													</option>
+												
+													<option value="SM">
+														SM
+													</option>
+												
+													<option value="SN">
+														SN
+													</option>
+												
+													<option value="SO">
+														SO
+													</option>
+												
+													<option value="SP">
+														SP
+													</option>
+												
+													<option value="SR">
+														SR
+													</option>
+												
+													<option value="SS">
+														SS
+													</option>
+												
+													<option value="ST">
+														ST
+													</option>
+												
+													<option value="SU">
+														SU
+													</option>
+												
+													<option value="SV">
+														SV
+													</option>
+												
+													<option value="SW">
+														SW
+													</option>
+												
+													<option value="SX">
+														SX
+													</option>
+												
+													<option value="SY">
+														SY
+													</option>
+												
+													<option value="SZ">
+														SZ
+													</option>
+												
+													<option value="TA">
+														TA
+													</option>
+												
+													<option value="TF">
+														TF
+													</option>
+												
+													<option value="TG">
+														TG
+													</option>
+												
+													<option value="TL">
+														TL
+													</option>
+												
+													<option value="TM">
+														TM
+													</option>
+												
+													<option value="TQ">
+														TQ
+													</option>
+												
+													<option value="TR">
+														TR
+													</option>
+												
+													<option value="TV">
+														TV
+													</option>
+												
+											</select>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<label for="pvmdrasgb" class="hidden">Post OS
+												VectorMap<sup>&trade;</sup> District GB
+											</label><input type="checkbox" id="pvmdrasgb" name="post[VMDRAS_GB]"
+												value="true" title="DVD" />
+										</p>
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>
+
+										<p>
+											<label for="dvmdrasg" class="hidden">Download OS
+												VectorMap<sup>&trade;</sup> District National Grid Squares
+											</label><input type="checkbox" id="dvmdrasg"
+												name="download[VMDRAS_Grid]" value="true" title="Download" />
+										</p>
+
+									</td>
+
+								</tr>
+							
+							<!-- OS VectorMap District (raster) - End -->
+							
+							<!-- Boundary-Line - Start -->
+							
+								<tr id="bl">
+
+									<td class="preview"><img
+										src="images/boundary-line.png" width="100"
+										height="75" alt="Boundary-Line map sample" /></td>
+
+									<td class="product">
+										<h2>
+											Boundary-Line<sup>&trade;</sup>
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p>
+										<p>
+											<label for="fblgb"><em>Supply format:</em> </label> <select
+												id="fblgb" name="format[BDLINE_GB]">
+												<option value="ESRI SHAPE" selected="selected">ESRI
+													&reg; Shape</option>
+												<option value="MAPINFO TAB">MapInfo&reg; TAB</option>
+											</select>
+										</p>
+										<p>
+											<em>Version:</em>
+											10/2015
+										</p>
+										<div class="productinfo">
+											<p>Boundary-Line is a vector digital mapping product that is a complete set of local government administrative boundaries and electoral boundaries used in local and general election voting. It has been specifically designed to show the area of each administrative or electoral boundary.</p><p>Cartographic Stylesheets are available for <a href="https://www.ordnancesurvey.co.uk/resources/carto-design/cartographic-stylesheets.html">free download</a>.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/620/certificates/14862/badge.js","odi14862");</script><div id="odi14862"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape: 330 Mb]<br /> [MapInfo&reg; TAB: 365 Mb]
+										</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pblgb" class="hidden">Post Boundary-Line
+													Great Britain</label><input type="checkbox" id="pblgb"
+													name="post[BDLINE_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dblgb" class="hidden">Download
+													Boundary-Line Great Britain</label><input type="checkbox"
+													id="dblgb" name="download[BDLINE_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Boundary-Line - End -->
+							
+							<!-- Code-Point - Start -->
+							
+								<tr id="cp">
+
+									<td class="preview"><img
+										src="images/codepoint.png" width="100"
+										height="75" alt="Code-Point map sample" /></td>
+
+									<td class="product">
+										<h2>
+											Code-Point<sup>&reg;</sup> Open
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Point Data
+										</p>
+										<p>
+											<em>Supply format:</em> CSV
+										</p>
+										<p>
+											<em>Version:</em>
+											11/2015
+										</p>
+										<div class="productinfo">
+											<p>Code-Point Open provides a precise geographic location for each postcode unit in Great&nbsp;Britain. The product is a CSV file containing postcodes, grid references, NHS<sup>&reg;</sup> health and regional health authority codes, administrative ward, district, county and country area codes.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/352/certificates/14867/badge.js","odi14867");</script><div id="odi14867"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain [20 Mb]</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pcpgb" class="hidden">Post Code-Point
+													Great Britain</label><input type="checkbox" id="pcpgb"
+													name="post[CODEPO_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dcpgb" class="hidden">Download
+													Code-Point Great Britain</label><input type="checkbox" id="dcpgb"
+													name="download[CODEPO_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Code-Point - End -->
+							
+							<!-- Meridian2 - Start -->
+							
+								<tr id="m2">
+
+									<td class="preview"><img
+										src="images/meridian2.png" width="100"
+										height="75" alt="Meridian2 map sample" /></td>
+
+									<td class="product">
+
+										<h2>
+											Meridian<sup>&trade;</sup>2
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p> <label for="fm2gb"><em>Supply format:</em> </label> <select
+										id="fm2gb" name="format[MERID2_GB]">
+											<option value="ESRI SHAPE" selected="selected">ESRI
+												&reg; Shape</option>
+
+											<option value="DXF">DXF</option>
+											<option value="MAPINFO TAB">MapInfo&reg; TAB</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											07/2015
+										</p>
+										<div class="productinfo">
+											<p>Meridian 2 is a mid-scale vector product delivered through a number of layers of data, including motorways, A roads, B roads, railways developed land-use areas, hydrology, woodland.</p><p>Cartographic Stylesheets are available for <a href="https://www.ordnancesurvey.co.uk/resources/carto-design/cartographic-stylesheets.html">free download</a>.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/582/certificates/14863/badge.js","odi14863");</script><div id="odi14863"></div>
+										</div>
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape: 201 Mb]<br /> [DXF: 151 Mb]<br />
+											[MapInfo&reg; TAB: 219 Mb]
+										</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pm2gb" class="hidden">Post Meridian2
+													Great Britain</label><input type="checkbox" id="pm2gb"
+													name="post[MERID2_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dm2gb" class="hidden">Download Meridian2
+													Great Britain</label><input type="checkbox" id="dm2gb"
+													name="download[MERID2_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Meridian2 - End -->	
+							
+							<!-- Strategi - Start -->
+							
+								<tr id="s">
+
+									<td class="preview"><img
+										src="images/strategi.png" width="100"
+										height="75" alt="Strategi map sample" /></td>
+
+									<td class="product">
+										<h2>
+											Strategi<sup>&reg;</sup>
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Vector
+										</p> <label for="fsgb"><em>Supply format:</em> </label> <select
+										id="fsgb" name="format[STRTGI_GB]">
+
+											<option value="ESRI SHAPE" selected="selected">ESRI
+												&reg; Shape</option>
+											<option value="DXF">DXF</option>
+											<option value="MAPINFO TAB">MapInfo&reg; TAB</option>
+									</select>
+										<p>
+											<em>Version:</em>
+											01/2015
+										</p>
+										<div class="productinfo">
+											<p>Strategi is a small-scale, vector, digital mapping product that is the vector companion to the 1:250&nbsp;000 Scale Colour Raster product. It is a generalised dataset designed for use at a regional level.</p><p>Cartographic Stylesheets are available for <a href="https://www.ordnancesurvey.co.uk/resources/carto-design/cartographic-stylesheets.html">free download</a>.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/853/certificates/14860/badge.js","odi14860");</script><div id="odi14860"></div>
+										</div>
+									</td>
+
+									<td>
+										<p>Great Britain</p>
+										<p>
+											[ESRI &reg; Shape: 52 Mb]<br /> [DXF: 52 Mb]<br />
+											[MapInfo&reg; TAB: 48.2 Mb]
+										</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="psgb" class="hidden">Post Strategi Great
+													Britain</label><input type="checkbox" id="psgb"
+													name="post[STRTGI_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dsgb" class="hidden">Download Strategi
+													Great Britain</label><input type="checkbox" id="dsgb"
+													name="download[STRTGI_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Strategi - End -->							
+							
+							<!-- 1:250 000 Scale Colour Raster - Start -->
+							
+								<tr id="scr250000">
+
+									<td class="preview"><img
+										src="images/250k.png" width="100"
+										height="75" alt="1:250 000 Scale Colour Raster map sample" />
+									</td>
+
+									<td class="product">
+										<h2>1:250 000 Scale Colour Raster</h2>
+										<p>
+											<em>Data type:</em>
+											Raster
+										</p>
+										<p>
+											<em>Supply format:</em> TIFF-LZW
+										</p>
+										<p>
+											<em>Version:</em>
+											06/2015
+										</p>
+										<div class="productinfo">
+											<p>1:250&nbsp;000 Scale Colour Raster is a small-scale, digital, raster mapping product giving a regional view, similar in content and appearance to a typical road atlas. It clearly shows the landscape features relevant to its scale, including cities, towns, many villages, motorways, A and B class roads, railways, rivers and some woodlands</p><script>renderODIBadge("https://certificates.theodi.org/datasets/860/certificates/14858/badge.js","odi14858");</script><div id="odi14858"></div>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain [112 Mb]</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pscr250000gb" class="hidden">Post 1:250
+													000 Scale Colour Raster Great Britain</label><input type="checkbox"
+													id="pscr250000gb" name="post[RAS250_GB]" value="true"
+													title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="scr250000d" class="hidden">1:250 000
+													Scale Colour Raster download</label><input type="checkbox"
+													id="scr250000d" name="download[RAS250_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- 1:250 000 Scale Colour Raster - End -->
+							
+							<!-- Mini-Scale - Start -->
+							
+								<tr id="ms">
+
+									<td class="preview"><img
+										src="images/miniscale.png" width="100"
+										height="75" alt="Mini-Scale map sample" /></td>
+
+									<td class="product">
+										<h2>
+											MiniScale<sup>&reg;</sup>
+										</h2>
+										<p>
+											<em>Data type:</em>
+											Raster
+										</p>
+										<p>
+											<em>Supply format:</em> TIFF-LZW
+										</p>
+										<p>
+											<em>Version:</em>
+											01/2015
+										</p>
+										<div class="productinfo">
+											<p>MiniScale is the smallest-scale product in the OS OpenData catalogue and has been designed primarily for use within desktop graphic applications, where simple backdrop topographic mapping of Great&nbsp;Britain is required.<br />It clearly shows the landscape features relevant to its scale, including boundaries, settlements, main communications and physical features.</p><p>Adobe Illustrator CS<sup>&reg;</sup> and editable Encapsulated Post Script (EPS) vector formats are also supplied as part of the download or data supplied on DVD.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/661/certificates/14711/badge.js","odi14711");</script><div id="odi14711"></div>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain [304 Mb]</p>
+
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pmsgb" class="hidden">Post Mini-Scale
+													Great Britain</label><input type="checkbox" id="pmsgb"
+													name="post[MINISC_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dmsgb" class="hidden">Download
+													Mini-Scale Great Britain</label><input type="checkbox" id="dmsgb"
+													name="download[MINISC_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Mini-Scale - End -->
+							
+							<!-- OS Street View - Start -->
+							
+								<tr id="ossv">
+
+									<td class="preview"><img
+										src="images/osstreetview.png" width="100"
+										height="75" alt="OS Street View map sample" /></td>
+
+									<td class="product">
+										<h2>
+											OS Street View<sup>&reg;</sup>
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Raster
+										</p>
+										<p>
+											<em>Supply format:</em> TIFF-LZW
+										</p>
+										<p>
+											<em>Version:</em>
+											11/2015
+										</p>
+
+										<div class="gridhelp">
+											<h3>Selecting National Grid Reference squares</h3>
+
+											<script type="text/javascript">
+												//          
+												document
+														.write('<p>Using the map on the right, or a <a href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf" title="PDF Document [1.4 Mb]" class="newwin">full size version</a>, identify which square(s) you want to download. Select or deselect squares by clicking on the map on the right.'
+																+ '<p>To manually select or deselect multiple squares from the two letter reference list, press and hold the <strong>CTRL</strong> key (Windows) or the <strong>Command</strong> key (OS X) while selecting from the list.</p>');
+												//
+											</script>
+
+											<noscript>
+												<p>
+													Using the map on the right, or a <a
+														href="http://www.os.uk/oswebsite/opendata/docs/ng-large.pdf"
+														title="PDF Document [1.4 Mb]" class="newwin">full size
+														version</a>, identify which square(s) you want to download.
+													Select or deselect squares by clicking on the two letter
+													reference in the list to the right of the map.
+												</p>
+												<p>
+													To select or deselect multiple squares from the two letter
+													reference list, press and hold the <strong>CTRL</strong>
+													key (Windows) or the <strong>Command</strong> key (OS X)
+													while selecting from the list.
+												</p>
+											</noscript>
+
+											<div class="productinfo">
+												<p>Download size varies according to area selected.</p><p>OS Street View is 1:10&nbsp;000 scale street-level, colour, digital raster mapping that has been specifically designed to cartographically emphasise road carriageways, road names and their Department for Transport (DfT) numbers. Major public buildings are also highlighted and annotated</p><script>renderODIBadge("https://certificates.theodi.org/datasets/571/certificates/14864/badge.js","odi14864");</script><div id="odi14864"></div>
+											</div>
+
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+										<p>Great Britain</p>
+										<p>England</p>
+										<p>Scotland</p>
+										<p>Wales</p>
+
+										<p>
+											National Grid Reference squares<br /> [1 Mb - 1.2 Gb]
+										</p> 
+										<div id = "download[OSSTVW_Grid]"></div>
+										<div id="ossvgrid" class="natgrid">
+											<img src="images/nationalgrid.gif" class="gridmap"
+												width="135" height="250" alt="National Grid Reference map" />
+											<label for="cossvg" class="hidden">Coverage OS Street
+												View National Grid Reference</label> <select id="cossvg"
+												name="coverage[OSSTVW_Grid]" multiple="multiple"
+												onchange="downloadCheck(this.id.substring(1));">
+												
+													<option value="HP">
+														HP
+													</option>
+												
+													<option value="HT">
+														HT
+													</option>
+												
+													<option value="HU">
+														HU
+													</option>
+												
+													<option value="HW">
+														HW
+													</option>
+												
+													<option value="HX">
+														HX
+													</option>
+												
+													<option value="HY">
+														HY
+													</option>
+												
+													<option value="HZ">
+														HZ
+													</option>
+												
+													<option value="NA">
+														NA
+													</option>
+												
+													<option value="NB">
+														NB
+													</option>
+												
+													<option value="NC">
+														NC
+													</option>
+												
+													<option value="ND">
+														ND
+													</option>
+												
+													<option value="NF">
+														NF
+													</option>
+												
+													<option value="NG">
+														NG
+													</option>
+												
+													<option value="NH">
+														NH
+													</option>
+												
+													<option value="NJ">
+														NJ
+													</option>
+												
+													<option value="NK">
+														NK
+													</option>
+												
+													<option value="NL">
+														NL
+													</option>
+												
+													<option value="NM">
+														NM
+													</option>
+												
+													<option value="NN">
+														NN
+													</option>
+												
+													<option value="NO">
+														NO
+													</option>
+												
+													<option value="NR">
+														NR
+													</option>
+												
+													<option value="NS">
+														NS
+													</option>
+												
+													<option value="NT">
+														NT
+													</option>
+												
+													<option value="NU">
+														NU
+													</option>
+												
+													<option value="NW">
+														NW
+													</option>
+												
+													<option value="NX">
+														NX
+													</option>
+												
+													<option value="NY">
+														NY
+													</option>
+												
+													<option value="NZ">
+														NZ
+													</option>
+												
+													<option value="OV">
+														OV
+													</option>
+												
+													<option value="SD">
+														SD
+													</option>
+												
+													<option value="SE">
+														SE
+													</option>
+												
+													<option value="SH">
+														SH
+													</option>
+												
+													<option value="SJ">
+														SJ
+													</option>
+												
+													<option value="SK">
+														SK
+													</option>
+												
+													<option value="SM">
+														SM
+													</option>
+												
+													<option value="SN">
+														SN
+													</option>
+												
+													<option value="SO">
+														SO
+													</option>
+												
+													<option value="SP">
+														SP
+													</option>
+												
+													<option value="SR">
+														SR
+													</option>
+												
+													<option value="SS">
+														SS
+													</option>
+												
+													<option value="ST">
+														ST
+													</option>
+												
+													<option value="SU">
+														SU
+													</option>
+												
+													<option value="SV">
+														SV
+													</option>
+												
+													<option value="SW">
+														SW
+													</option>
+												
+													<option value="SX">
+														SX
+													</option>
+												
+													<option value="SY">
+														SY
+													</option>
+												
+													<option value="SZ">
+														SZ
+													</option>
+												
+													<option value="TA">
+														TA
+													</option>
+												
+													<option value="TF">
+														TF
+													</option>
+												
+													<option value="TG">
+														TG
+													</option>
+												
+													<option value="TL">
+														TL
+													</option>
+												
+													<option value="TM">
+														TM
+													</option>
+												
+													<option value="TQ">
+														TQ
+													</option>
+												
+													<option value="TR">
+														TR
+													</option>
+												
+													<option value="TV">
+														TV
+													</option>
+												
+											</select>
+										</div>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="possvgb" class="hidden">Post OS Street
+													View GB</label><input type="checkbox" id="possvgb"
+													name="post[OSSTVW_GB]" value="true" title="DVD" />
+											</p>
+										  
+											<p>
+												<label for="possve" class="hidden">Post OS Street
+													View England</label><input type="checkbox" id="possve"
+													name="post[OSSTVW_England]" value="true" title="DVD" />
+											</p>
+										  
+											<p>
+												<label for="possvs" class="hidden">Post OS Street
+													View Scotland</label><input type="checkbox" id="possvs"
+													name="post[OSSTVW_Scotland]" value="true" title="DVD" />
+											</p>
+										  
+											<p>
+												<label for="possvw" class="hidden">Post OS Street
+													View Wales</label><input type="checkbox" id="possvw"
+													name="post[OSSTVW_Wales]" value="true" title="DVD" />
+											</p>
+										 
+
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p></td>
+
+									<td class="deliveryoptions">
+										<p>
+											<acronym title="Not Available">N/A</acronym>
+										</p>  
+											<p>
+												<acronym title="Not Available">N/A</acronym>
+											</p>
+										  
+											<p>
+												<acronym title="Not Available">N/A</acronym>
+											</p>
+										  
+											<p>
+												<acronym title="Not Available">N/A</acronym>
+											</p>
+										 
+											<p>
+												<label for="dossvg" class="hidden">Download OS
+													Street View National Grid Squares</label><input type="checkbox"
+													id="dossvg" name="download[OSSTVW_Grid]" value="true"
+													title="Download" />
+											</p>
+										 
+									</td>
+
+								</tr>
+							
+							<!-- OS Street View - End -->
+							
+							<!-- 1:50 000 Scale Gazetteer - Start -->
+							
+								<tr id="sg50000">
+
+									<td class="preview"><img
+										src="images/50k-gaz.png" width="100"
+										height="75" alt="1:50 000 Scale Gazetteer map sample" /></td>
+
+									<td class="product">
+										<h2>1:50 000 Scale Gazetteer</h2>
+
+										<p>
+											<em>Data type:</em>
+											Point Data
+										</p>
+										<p>
+											<em>Supply format:</em> ASCII text, Colon separated
+										</p>
+										<p>
+											<em>Version:</em>
+											06/2015
+										</p>
+										<div class="productinfo">
+											<p>The 1:50&nbsp;000 Scale Gazetteer is a reference tool or location finder, similiar to the index in a road atlas. It can be used as a simple list to find out relevant coordinates and six-figure grid references for a town or area.</p><p>On the 1 June 2015, a notice of withdrawal was issued. <a href="http://www.ordnancesurvey.co.uk/business-and-government/products/50k-gazetteer.html">Further information</a></p><script>renderODIBadge("https://certificates.theodi.org/datasets/346/certificates/14868/badge.js","odi14868");</script><div id="odi14868"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain [11 Mb]</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="psg50000gb" class="hidden">Post 1:50 000
+													Scale Gazetteer Great Britain</label><input type="checkbox"
+													id="psg50000gb" name="post[GAZ50K_GB]" value="true"
+													title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dsg50000gb" class="hidden">Download 1:50
+													000 Scale Gazetteer Great Britain</label><input type="checkbox"
+													id="dsg50000gb" name="download[GAZ50K_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- 1:50 000 Scale Gazetteer - End -->
+							
+							<!-- OS Locator - Start -->
+							
+								<tr id="sGAZLCO">
+
+									<td class="preview"><img
+										src="images/locator.png" width="100"
+										height="75" alt="OS Locator map sample" /></td>
+
+									<td class="product">
+										<h2>
+											OS Locator<sup>&trade;</sup>
+										</h2>
+
+										<p>
+											<em>Data type:</em>
+											Point Data
+										</p>
+										<p>
+											<em>Supply format:</em> ASCII text, Colon separated
+										</p>
+										<p>
+											<em>Version:</em>
+											11/2015
+										</p>
+										<div class="productinfo">
+											<p>OS Locator is a fully searchable point-based national gazetteer of road names. Specific locations can be found and identified by a number of criteria, including locality, settlement, local authority and county.</p><p>On the 1 June 2015, a notice of withdrawal was issued. <a href="http://www.ordnancesurvey.co.uk/business-and-government/products/os-locator.html">Further information</a></p><p>Cartographic Stylesheets are available for <a href="https://www.ordnancesurvey.co.uk/resources/carto-design/cartographic-stylesheets.html">free download</a>.</p><script>renderODIBadge("https://certificates.theodi.org/datasets/507/certificates/14865/badge.js","odi14865");</script><div id="odi14865"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain [35 Mb]</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="psGAZLCOgb" class="hidden">Post OS
+													Locator Great Britain</label><input type="checkbox" id="psGAZLCOgb"
+													name="post[GAZLCO_GB]" value="true" title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dsGAZLCOgb" class="hidden">Download OS
+													Locator Great Britain</label><input type="checkbox" id="dsGAZLCOgb"
+													name="download[GAZLCO_GB]" value="true" title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- OS Locator - End -->
+							
+							<!-- Land-Form PANORAMA - Start -->
+							
+								<tr id="spancon">
+
+									<td class="preview"><img
+										src="images/landform-panorama.png" width="100"
+										height="75" alt="Land-Form PANORAMA map sample" /></td>
+
+									<td class="product">
+										<h2>
+											Land-Form PANORAMA<sup>&reg;</sup>
+										</h2>
+
+
+										<p>
+											<em>Data type:</em>
+											Vector (Contours), Grid (DTM)
+										</p>
+										<p>
+											<em>Supply format:</em> DXF [Contours],<br />ASCII grid
+											[DTM],<br />NTF [DTM]
+										</p>
+										<p>
+											<em>Version:</em>
+											04/2010
+										</p>
+										<div class="productinfo">
+											<h3>Note</h3><p>This product is supplied both as a set of contours and spot heights (Contours) and as a gridded digital terrain model (DTM).</p><p>Panorama data was collected between 1970 and 1980. This product has not been updated since this date</p><script>renderODIBadge("https://certificates.theodi.org/datasets/357/certificates/14866/badge.js","odi14866");</script><div id="odi14866"></div>
+										</div>
+
+									</td>
+
+									<td>
+										<p>Great Britain [530 Mb]</p>
+									</td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="pspancongb" class="hidden">Post
+													Land-Form PANORAMA Great Britain</label><input type="checkbox"
+													id="pspancongb" name="post[PANCON_GB]" value="true"
+													title="DVD" />
+											</p>
+										 </td>
+
+									<td class="deliveryoptions">
+											<p>
+												<label for="dspancongb" class="hidden">Download
+													Land-Form PANORAMA Great Britain</label><input type="checkbox"
+													id="dspancongb" name="download[PANCON_GB]" value="true"
+													title="Download" />
+											</p>
+										 </td>
+
+								</tr>
+							
+							<!-- Land-Form PANORAMA - End -->
+							
+							<!-- RETIRED PRODUCTS -->
+							
+							<!-- 1:50 000 Scale Colour Raster - Start -->
+							
+							<!-- 1:50 000 Scale Colour Raster - End -->
+
+							<!-- 1:25 000 Scale Colour Raster - Start -->
+							
+							<!-- 1:25 000 Scale Colour Raster - End -->
+						</tbody>
+
+					</table>
+
+					<div class="alignright">
+						<input type="image" src="images/bttn-next.png"
+							alt="Form submit button" title="Next" />
+					</div>
+
+				</fieldset>
+
+			</form>
+
+			<div id="row2">
+
+	<p class="hidden"><a href="#navblockend" accesskey="R" title="Skip supplementary navigation block [Accesskey: R]">Skip supplementary navigation block</a></p>
+		
+	<a name="navblockstart" id="navblockstart"></a>
+    
+    
+			<div class="col1">
+				
+				<h2>About</h2>
+				
+				<p><a class="newwin" href="http://www.ordnancesurvey.co.uk/oswebsite/opendata/viewer/">View</a>, <a href="http://www.ordnancesurvey.co.uk/opendatadownload/products.html">download and order</a> OS OpenData or use <a href="http://openspace.ordnancesurvey.co.uk/openspace/">OS OpenSpace&#174;</a>&#160;to enhance your own application.</p><p>You can also experiment with <a title="" href="http://www.ordnancesurvey.co.uk/oswebsite/opendata/linkeddata.html" rel="section">OS OpenData in Linked Data format</a>.</p><p>Why not take part in the&#160;<a title="" href="http://www.geovation.org.uk/geovationchallenge/" rel="section">GeoVation Challenge</a>?</p><p>If OS OpenData doesn't meet your needs, why not try:</p><ul><li>The Ordnance Survey <a title="" href="http://shop.ordnancesurveyleisure.co.uk/?campaign=opendata" rel="section">Map Shop</a> for paper maps.</li><li>The <a href="http://explore.ordnancesurvey.co.uk/?campaign=opendata">Explore portal</a> for routes, photos and blogs.</li><li>Ordnance Survey mapping for <a href="http://www.ordnancesurvey.co.uk/oswebsite/business/">business</a> or <a title="" href="http://www.ordnancesurvey.co.uk/oswebsite/education-and-research/index.html" rel="section">education</a>.</li></ul>
+	        
+			</div>
+			
+			<div class="col2">
+				
+				<h2>Help</h2>
+				
+				<p>See our&#160;<a title="" href="/support/os-opendata.html" rel="section">FAQ</a>&#160;page to find answers to any questions you might have about OS&#160;OpenData.</p><p>Or you can <a href="mailto:opendata@ordnancesurvey.co.uk">email</a> or call us on <strong>0345&#160;408&#160;1895</strong> (8.30 am-5.30 pm, Monday to Friday).</p><ul><li><a title="" href="http://www.nationalarchives.gov.uk/doc/open-government-licence/" rel="external">Open Government Licence</a></li><li><a title="" href="/privacy.html" rel="external">Website privacy policy</a></li><li><a title="" href="/legal/terms-part-a.html" rel="external">Website terms of use</a></li></ul>
+	        
+			</div>
+	      
+			<div class="col3">
+		    
+				<h2>Keep in touch</h2>
+				
+				<h3>Follow</h3>
+				
+					<ul id="socialbookmarks">
+					<li><a href="http://www.youtube.com/user/OSMapping"><img title="YouTube logo" alt="YouTube logo" src="/opendata/images/youtube.png" /></a></li>
+					<li><a href="http://twitter.com/OrdnanceSurvey"><img title="twitter logo" alt="twitter logo" src="/opendata/images/twitter.png" /></a></li>
+					<li><a href="http://www.facebook.com/pages/Ordnance-Survey/33622410535?ref=ts"><img title="facebook logo" alt="facebook logo" src="/opendata/images/facebook.png" /></a></li>
+					<li><a href="/blog/"><img title="OS blog logo" alt="OS blog logo" src="/opendata/images/osblog.png" /></a></li>
+				</ul>
+				
+				<div id="share"></div>
+				
+				<script type="text/javascript" src="/opendata/scripts/share.min.js"></script>
+				
+				
+				
+				<p><a href="/opendata/trademarks/index.html">Third-party trademark information</a>.</p><p>Featured blogs:</p><p><a href="http://blog.ordnancesurvey.co.uk/">Ordnance Survey Blog</a>, <a href="http://www.w3.org/DesignIssues/">Sir Tim Berners-Lee</a>, <a href="http://users.ecs.soton.ac.uk/nrs/">Professor Nigel Shadbolt</a>, <a href="http://digital.cabinetoffice.gov.uk/">Digital Engagement</a></p>
+
+			</div>
+  
+                  
+    <div class="clearing"></div>
+
+	<a name="navblockend" id="navblockend"></a>
+ 
+</div>
+
+<div id="footer">
+
+	<script type="text/javascript">
+	// 
+	document.write('<p><a href="http://www.os.uk/oswebsite/">Ordnance Survey</a> &#169;  '+new Date().getFullYear()+'</p>');
+	// 
+	</script>
+	<noscript>
+		<p><a href="http://www.os.uk/oswebsite/">Ordnance Survey</a> &#169;  2010</p>
+	</noscript>
+</div>
+
+		</div>
+
+		<script type="text/javascript">	var _gaq = _gaq || [];		//Master account	_gaq.push(['_setAccount', 'UA-33522501-1']);	_gaq.push(['_setDomainName', 'none']);	_gaq.push(['_setAllowLinker', true]);	_gaq.push(['_trackPageview']);  (function() {    var ga = document.createElement('script');    ga.type = 'text/javascript';    ga.async = true;    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    var s = document.getElementsByTagName('script')[0];    s.parentNode.insertBefore(ga, s);  })();</script>
+	</div>
+</body>
+</html>
+

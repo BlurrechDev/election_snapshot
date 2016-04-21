@@ -1,0 +1,783 @@
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3487 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3421 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3401 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3452 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3444 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3448 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3431 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3470 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3390 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3298 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3311 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3459 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3372 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3487 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3362 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3500 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3498 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3413 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3487 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3324 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3409 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3514 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3503 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.6s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [8573 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [7131 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3401 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3446 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3428 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3656 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [7440 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3438 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3358 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3422 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3494 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3482 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3421 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3360 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3454 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3465 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3227 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3400 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3528 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3498 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.9s (0.6s awaiting secondary inputs)."}}]
+build.dart finished [3913 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [4507 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3479 ms]
+
+---
+build.dart --machine --removed=web\data\elections.tsv
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3581 ms]
+
+---
+build.dart --machine --changed=web\data\elections.tsv
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3447 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3371 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3949 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3322 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3414 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3584 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3342 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3393 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.3s awaiting secondary inputs)."}}]
+build.dart finished [3478 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3295 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3414 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3429 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.1s awaiting secondary inputs)."}}]
+build.dart finished [3959 ms]
+
+---
+build.dart --machine --changed=web\styles.css
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [4382 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3372 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/index.html","message":"(from html5lib) End tag (div) seen too early. Expected other end tag. See http://goo.gl/5HPeuP#polymer_40 for details.","line":28,"charStart":1388,"charEnd":1394}}]
+[{"method":"warning","params":{"file":"web/index.html","message":"(from html5lib) End tag (h1) seen too early. Expected other end tag. See http://goo.gl/5HPeuP#polymer_40 for details.","line":28,"charStart":1394,"charEnd":1399}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3622 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3445 ms]
+
+---
+build.dart --machine --changed=web\styles.css
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3426 ms]
+
+---
+build.dart --machine --changed=web\styles.css
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3453 ms]
+
+---
+build.dart --machine --changed=web\data\germany-l-2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3938 ms]
+
+---
+build.dart --machine --changed=web\data\germany-l-2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3398 ms]
+
+---
+build.dart --machine --changed=web\data\germany-l-2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3302 ms]
+
+---
+build.dart --machine --changed=web\data\germany-l-2017.txt --changed=web\data\united kingdom-l-2015.txt --chang...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3427 ms]
+
+---
+build.dart --machine --changed=web\data\germany--2017.txt --changed=web\data\united kingdom-l-2015.txt --change...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.5s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [4457 ms]
+
+---
+build.dart --machine --changed=web\data\germany--2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\d...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3382 ms]
+
+---
+build.dart --machine --changed=web\data\germany--2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\d...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3397 ms]
+
+---
+build.dart --machine --changed=web\lib\main_app.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3434 ms]
+
+---
+build.dart --machine --changed=web\data\germany--2017.txt --changed=web\data\ireland-l-2016.txt --changed=web\d...
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3424 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.6s (0.4s awaiting secondary inputs)."}}]
+build.dart finished [6988 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3686 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3447 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3386 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3508 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+build.dart finished [3341 ms]
+
+---
+build.dart --machine --changed=web\earth_elects.dart
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3455 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.2s (0.0s awaiting secondary inputs)."}}]
+[{"method":"warning","params":{"file":"web/index.html","message":"Only one \"application/dart\" script tag per document is allowed. See http://goo.gl/5HPeuP#polymer_7 for details.","line":89,"charStart":5872,"charEnd":5904}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3415 ms]
+
+---
+build.dart --machine --changed=web\index.html
+error: pubspec.yaml file not found.
+[{"method":"warning","params":{"file":"web/lib/earth_globe.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"warning","params":{"file":"web/lib/main_app.html","message":"(from html5lib) Unexpected start tag (link). Expected DOCTYPE. See http://goo.gl/5HPeuP#polymer_40 for details.","line":1,"charStart":0,"charEnd":62}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"info","params":{"message":"Took 0.3s (0.0s awaiting secondary inputs)."}}]
+[{"method":"warning","params":{"file":"web/index.html","message":"Only one \"application/dart\" script tag per document is allowed. See http://goo.gl/5HPeuP#polymer_7 for details.","line":89,"charStart":5845,"charEnd":5877}}]
+[{"method":"info","params":{"message":"Took 0.4s (0.2s awaiting secondary inputs)."}}]
+build.dart finished [3534 ms]
+
