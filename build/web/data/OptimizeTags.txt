@@ -1,5 +1,0 @@
-Page: http://earthelects.com/
-<title>Election View</title>
-<meta name="description" content="Global Election data and opinion polls scraped from Wikipedia, updated at regular fixed intervals. New data will soon be added such as outcome odds & news.">
-
-====================================================================================================================
